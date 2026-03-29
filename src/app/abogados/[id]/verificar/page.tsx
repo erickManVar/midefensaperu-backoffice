@@ -30,7 +30,7 @@ export default function VerificarAbogadoPage() {
   const [message, setMessage] = useState('')
 
   useEffect(() => {
-    const token = typeof window !== 'undefined' ? localStorage.getItem('midefensa_admin_token') : null
+  const token = typeof window !== 'undefined' ? localStorage.getItem('midefensa_admin_token') : null
     fetch(`${BASE}/admin/lawyers/${id}`, {
       headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
     })

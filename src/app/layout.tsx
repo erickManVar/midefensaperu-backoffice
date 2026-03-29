@@ -6,8 +6,8 @@ import Sidebar from '@/components/Sidebar'
 const geist = Geist({ variable: '--font-geist', subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'MiDefensaPerú — Admin',
-  description: 'Panel de administración MiDefensaPerú',
+  title: 'MiDefensaPerú — Panel Abogado',
+  description: 'Panel del abogado — MiDefensaPerú',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es" className={`${geist.variable} h-full`}>
       <body className="min-h-full flex bg-gray-50 antialiased">
         <Sidebar />
-        <main className="flex-1 p-8 overflow-auto">{children}</main>
+        <main className="flex-1 p-8 overflow-auto min-h-screen">{children}</main>
       </body>
     </html>
   )
